@@ -1,6 +1,6 @@
 package Bullseye_07;
 
-public class findRowWithMaxOnes1 {
+public class findRowWithMaxOn1 {
     
     public static int findRowWithMaxOnes(int[][] parkingLot) {
         int maxOnes = 0;
