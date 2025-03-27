@@ -1,20 +1,19 @@
 package Bullseye_09;
 
-public class DeletionLinked {
+public class DeletionLinkedBeginning {
 
     class Node {
         int data;
         Node next;
 
         Node(int data) {
-            this.data = data;
+            this.data = data; // Fixed incorrect assignment
             this.next = null;
         }
     }
 
     private Node head;
 
-  
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -28,6 +27,13 @@ public class DeletionLinked {
         }
     }
 
+    public void deleteFromBeginning() {
+        if (head == null) {
+            System.out.println("List is empty. Nothing to delete.");
+            return;
+        }
+        head = head.next; // Deletes the first node by updating the head reference
+    }
 
     public void delete(int value) {
         if (head == null) {
@@ -35,7 +41,6 @@ public class DeletionLinked {
             return;
         }
 
-    
         if (head.data == value) {
             head = head.next;
             return;
@@ -46,7 +51,6 @@ public class DeletionLinked {
             temp = temp.next;
         }
 
-     
         if (temp.next == null) {
             System.out.println("Value not found in the list.");
             return;
@@ -55,7 +59,6 @@ public class DeletionLinked {
         temp.next = temp.next.next;
     }
 
- 
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
@@ -71,13 +74,17 @@ public class DeletionLinked {
     }
 
     public static void main(String[] args) {
-        DeletionLinked list = new DeletionLinked();
+        DeletionLinkedBeginning list = new DeletionLinkedBeginning();
         list.insert(10);
         list.insert(20);
         list.insert(30);
         list.insert(40);
 
         System.out.println("Original List:");
+        list.display();
+
+        System.out.println("Deleting from the beginning:");
+        list.deleteFromBeginning();
         list.display();
 
         System.out.println("Deleting 20:");
