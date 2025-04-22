@@ -65,5 +65,5 @@ It's especially crafted for **beginners** looking to understand core DSA concept
 ### 📁 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/dsa-java.git
+https://github.com/deepakshroff/HitBulleye_Lab.git
 cd dsa-java
